@@ -1,0 +1,38 @@
+<div class="flex items-center gap-8">
+  <fa-icon [icon]="awesome ? icons.awesome : icons.notAwesome" 
+      size="lg" 
+      [ngClass]="awesome ? 'text-amber-500' : 'opacity-20'"></fa-icon>
+  <div class="flex flex-col gap-2 flex-1">
+    <div class="inline-flex items-center gap-2">
+      <span class="font-semibold">{{ name }}</span>
+      <span class="text-sm text-gray-500 font-mono">{{ username }}</span>
+    </div>
+    <div class="inline-flex flex-wrap items-center gap-4">
+      <span class="text-sm text-gray-900">friends:</span>
+      @for (friend of friends; track $index) {
+        <span class="py-1 px-2 text-sm bg-slate-100 rounded-md">{{friend}}</span>
+      }
+      @empty {
+        <span class="text-sm text-slate-500">-none-</span>
+      }
+    </div>
+  </div>
+  <div class="inline-flex items-center gap-2">
+    <span class="text-fuchsia-900 text-sm">favorites:</span>
+    <span class="text-sm text-gray-500">
+      <span class="flex gap-3">
+        <fa-icon [icon]="icons.color"></fa-icon>
+        <span>{{ favoriteColor }}</span>
+      </span>
+      <span class="flex gap-3">
+        <fa-icon [icon]="icons.food"></fa-icon>
+        <span>{{ favoriteFood }}</span>
+      </span>
+    </span>
+
+  </div>
+  <div class="inline-flex items-center gap-2">
+    <fa-icon [icon]="icons.likes"></fa-icon>
+    <span>{{likes}}</span>
+  </div>
+</div>

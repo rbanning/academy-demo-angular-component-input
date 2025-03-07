@@ -1,4 +1,17 @@
 <h2>&#64;Input() Props</h2>
-<p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo deserunt, quidem inventore illum odit doloremque magni pariatur ipsam veritatis eos a consequatur molestiae ex harum, perspiciatis voluptatem! Suscipit, maxime fugiat.
-</p>
+
+<div class="my-8">
+  <h4 class="text-slate-600 font-bold">People</h4>
+  <div class="flex flex-col gap-6">
+    @for (item of people; track $index) {
+      <hallpass-list-item
+        [name]="item.name"
+        [username]="item.username"
+        [color]="item.favorite.color"
+        [food]="item.favorite.food"
+        [friends]="item.friends"
+        [likes]="item.likes"
+        [awesome]="item.awesome"/>
+    }
+  </div>
+</div>
