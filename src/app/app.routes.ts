@@ -10,5 +10,10 @@ export const routes: Routes = [
     path: 'input-decorator-props',
     loadComponent: () => import('./views/input-decorator-props/view-input-decorator-props.component')
       .then(m => m.ViewInputDecoratorPropsComponent)
-  }
+  },
+  {
+    path: 'why-transformations-rock',
+    loadComponent: () => import('./views/why-transformations-rock/why-transformations-rock.component')
+      .then(m => m.WhyTransformationsRockComponent)
+  },
 ];

@@ -1,5 +1,10 @@
 <main class="my-4 max-w-3xl mx-auto">
   <div class="subtitle"><span>Hallpass Academy</span></div>
-  <h1 class="mb-8">Angular Inputs Demo</h1>
+  <h1 class="mb-8 flex">
+    <span class="flex-1">Angular Inputs Demo</span>
+    <a [routerLink]="['/']" class="text-lg py-2 px-4 hover:bg-slate-50">
+      <fa-icon [icon]="icons.home"></fa-icon>
+    </a>
+  </h1>
   <router-outlet></router-outlet>
 </main>
