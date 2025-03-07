@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  @apply text-4xl text-red-800 font-serif font-thin;
+}
+.subtitle span {
+  @apply relative inline-block z-0 py-1 px-4  text-fuchsia-50 text-xl font-semibold;
+  &::before {
+    @apply content-[''] 
+      absolute inset-0 -z-[1] 
+      bg-fuchsia-400 rounded-xl
+      -rotate-1 -skew-x-6;
+    ;
+  }
+}
+h2 {
+  @apply text-3xl font-semibold text-fuchsia-400;
+}
