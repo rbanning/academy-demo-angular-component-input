@@ -11,15 +11,33 @@ import { DisplayInvitationsComponent } from './display-invitations/display-invit
   styles: ':host { display: block; }'
 })
 export class WhyTransformationsRockComponent {
-  invites: string[] = ['Alice', 'Bob', 'Charlie'];
+  invites: string[] = ['Charlie', 'Alice','Bob' ];
   newInvite = '';
 
+  resetArrayOnAdd = false;
+
   add() {
-    this.invites.push(this.newInvite);
+    if (this.resetArrayOnAdd) {
+      this.invites = [
+        ...this.invites,
+        this.newInvite
+      ];                                  // reassign the array                       
+    }
+    else {
+      this.invites.push(this.newInvite);  //mutate the array
+    }
     this.newInvite = '';
   } 
   remove(name: string) {
-    this.invites = this.invites.filter(m => m !== name);
+    if (this.resetArrayOnAdd) {
+      this.invites = this.invites.filter(m => m !== name);  // reassign the array
+    }
+    else {
+      const index = this.invites.indexOf(name);
+      if (index > -1) {
+        this.invites.splice(index, 1); // mutate the array
+      }
+    }
   }
 
 }

@@ -5,6 +5,9 @@
     <label for="newInvite">New Invite:</label>
     <input id="newInvite" type="text" [(ngModel)]="newInvite" class="border border-slate-300 rounded-md p-2">
     <button title="add new invite" (click)="add()" class="py-2 px-4 bg-slate-700 text-white hover:bg-slate-800">Add</button>
+    <span class="flex-1"></span>
+    <label for="useReset">Use array assignment on add() and remove()?</label>
+    <input id="useReset" type="checkbox" [(ngModel)]="resetArrayOnAdd" class="w-5 h-5 border border-slate-300 rounded-md p-2">
   </div>  
 </div>
 
