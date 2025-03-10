@@ -16,4 +16,9 @@ export const routes: Routes = [
     loadComponent: () => import('./views/why-transformations-rock/why-transformations-rock.component')
       .then(m => m.WhyTransformationsRockComponent)
   },
+  {
+    path: 'signal-input',
+    loadComponent: () => import('./views/signal-input/signal-input.component')
+      .then(m => m.SignalInputComponent)
+  },
 ];
