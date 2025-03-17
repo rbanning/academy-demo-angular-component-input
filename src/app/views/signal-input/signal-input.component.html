@@ -3,14 +3,15 @@
 <div class="my-8">
   <h3 class="text-xl font-bold">Star Wars People</h3>
 
-  @for (person of people(); track $index) {
+  @if( selectedFilm()) {
+    <div class="flex gap-4">
+      <span class="font-bold">{{selectedFilm()}}</span>
+      <button (click)="resetSelectedFilm()" class="text-sm bg-slate-200 rounded-md px-2">Clear</button>
+    </div>
+  }
+  @for (person of filteredPeople(); track $index) {
     <div class="my-4">
-      <div class="font-bold">{{person.name}}</div>
-      <div class="flex flex-wrap items-center gap-2">
-        @for (film of person.films; track $index) {
-          <span class="text-sm bg-slate-200 rounded-md px-2">{{film}}</span>
-        }
-      </div>
+      <hallpass-starwars-person [person]="person" (selectFilm)="handleSelectFilm($event)" />
     </div>
   }
 </div>

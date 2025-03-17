@@ -1,0 +1,13 @@
+@if (exists()) {
+  <div>{{name()}}</div>
+  <div class="flex flex-wrap items-center gap-2">
+    @for (film of films(); track $index) {
+      <button
+        (click)="selectFilm.emit(film)" 
+        class="text-sm bg-slate-200 rounded-md px-2">{{film}}</button>
+    }
+  </div>
+}
+@else {
+  <div class="text-sm text-slate-500">Loading...</div>
+}

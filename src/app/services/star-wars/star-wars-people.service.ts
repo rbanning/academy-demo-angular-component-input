@@ -42,7 +42,7 @@ export class StarWarsPeopleService {
                             ...person,
                             films: person.films.map((filmUrl) => {
                               const film = this.films().find(film => film.url === filmUrl);
-                              return film ? `${film.title} (${film.episode_id})` : 'Unknown';
+                              return film ? `${film.title} (ep.${film.episode_id})` : 'Unknown';
                             })
                           };
                         }));  // List of all people (with film titles instead of URLs)

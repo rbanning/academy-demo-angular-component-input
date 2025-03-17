@@ -7,7 +7,7 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
   selector: 'app-root',
   imports: [RouterOutlet, RouterModule, FontAwesomeModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   icons = {
