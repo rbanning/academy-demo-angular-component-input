@@ -38,7 +38,11 @@ module.exports = tseslint.config(
           caughtErrorsIgnorePattern: "^_",
           ignoreRestSiblings: true,
         },
-      ]
+      ],
+      "@angular-eslint/no-input-rename": "off",         //can be useful if documented
+      "@typescript-eslint/no-inferrable-types": "off",  //can be useful for readability
+      "@typescript-eslint/no-empty-interface": "off",   //can be useful for readability
+
     },
   },
   {

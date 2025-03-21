@@ -21,7 +21,9 @@ export class ListItemComponent {
 
 
   // ALIAS INPUT...
+  // eslint-disable-next-line @angular-eslint/no-input-rename
   @Input('color') favoriteColor? = 'none'; //optional
+  // eslint-disable-next-line @angular-eslint/no-input-rename
   @Input({ required: true, alias: 'food' }) favoriteFood!: string; //required
 
 
